@@ -4,7 +4,7 @@ import faiss
 from sentence_transformers import SentenceTransformer
 
 # Load model
-model = SentenceTransformer("all-mpnet-base-v2")
+model = SentenceTransformer("all-MiniLM-L6-v2")
 
 # Load assessment data
 with open("data/assessments.json", "r", encoding="utf-8") as f:
