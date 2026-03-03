@@ -20,7 +20,7 @@ print(f"Total training queries: {len(ground_truth)}")
 def get_predictions(query):
     try:
         response = requests.post(
-            "http://127.0.0.1:8000/recommend",
+            "https://shl-api-720651928669.us-central1.run.app/recommend",
             json={"query": query},
             timeout=30
         )

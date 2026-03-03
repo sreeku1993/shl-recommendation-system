@@ -12,7 +12,7 @@ print(f"Total test queries: {len(queries)}")
 def get_predictions(query):
     try:
         response = requests.post(
-            "http://127.0.0.1:8000/recommend",  # Change if deployed
+            "https://shl-api-720651928669.us-central1.run.app/recommend",  # Change if deployed
             json={"query": query},
             timeout=60
         )

@@ -1,11 +1,13 @@
-import json
+import json, os
 import numpy as np
 import faiss
 from sentence_transformers import SentenceTransformer
-
+save_path = "./local_model"
 # Load model
 model = SentenceTransformer("all-MiniLM-L6-v2")
+os.makedirs(save_path, exist_ok=True)
 
+model.save(save_path)#saved to local to prevent gcloud-huggingface errors
 # Load assessment data
 with open("data/assessments.json", "r", encoding="utf-8") as f:
     assessments = json.load(f)

@@ -12,7 +12,7 @@ if st.button("Get Recommendations"):
     else:
         try:
             response = requests.post(
-                "http://127.0.0.1:8000/recommend",  
+                "https://shl-api-720651928669.us-central1.run.app/recommend",  
                 json={"query": query},
                 timeout=60
             )

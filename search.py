@@ -7,9 +7,9 @@ import re
 
 # Load model 
 
-model = SentenceTransformer("all-MiniLM-L6-v2")
+#model = SentenceTransformer("all-MiniLM-L6-v2")
 
-
+model = SentenceTransformer("local_model")
 # Load FAISS index
 
 index = faiss.read_index("data/faiss_index.index")
